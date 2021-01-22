@@ -11,6 +11,6 @@ The quizz is about the dark knight trilogy
 
 ### Screenshots
 
-<img src ="screenshots/HomeScreen.jpg" width="200" height="200" />
+<img src ="screenshots/HomeScreen.jpg" width="'400" height="800" />
 
 
