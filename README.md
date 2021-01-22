@@ -13,4 +13,11 @@ The quizz is about the dark knight trilogy
 
 <img src ="screenshots/HomeScreen.jpg" width="'400" height="800" />
 
+<img src ="screenshots/LevelsScreen.jpg" width="'400" height="800" />
+
+<img src ="screenshots/OptionsScreen.jpg" width="'400" height="800" />
+
+<img src ="screenshots/OptinsRevealedScreen.jpg" width="'400" height="800" />
+
+
 
