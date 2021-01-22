@@ -2,8 +2,7 @@ import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 
-const Levels = ({ navigation, route }) => {
-  const { name, age } = route.params;
+const Levels = ({ navigation }) => {
   const { navigate } = navigation;
   return (
     <View
@@ -14,11 +13,7 @@ const Levels = ({ navigation, route }) => {
       }}
     >
       <FlatList
-        data={[
-          { level: 1, title: "Easy level" },
-          { level: 2, title: "Intermediate level" },
-          { level: 3, title: "Hard level" },
-        ]}
+        data={[{ level: 1, title: "Easy level" }]}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={{

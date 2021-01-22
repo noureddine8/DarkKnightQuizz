@@ -36,12 +36,7 @@ const Home = ({ navigation }) => {
             padding: 20,
             borderRadius: 10,
           }}
-          onPress={() =>
-            navigate("Levels", {
-              name: "Noureddine",
-              age: 21,
-            })
-          }
+          onPress={() => navigate("Levels")}
         >
           <Text style={{ fontSize: 32, fontWeight: "700", color: "#000" }}>
             Start Playing
