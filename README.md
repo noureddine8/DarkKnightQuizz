@@ -1,11 +1,12 @@
-# DarkKnightQuizz
+# Dark-Knight-Quiz-app
 
 This is a simple react native quizz app<br/>
 The quizz is about the dark knight trilogy
+**Getting started **
 
-**would you like to try it ?**
+1. `npm install`
 
-clone the repo<br/> 
-npm install <br/>
-npm start
+2. `npm start`
+
+
 
