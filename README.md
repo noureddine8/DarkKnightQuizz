@@ -9,5 +9,9 @@ The quizz is about the dark knight trilogy
 
 2. `npm start`
 
+### Screenshots
+
+![](screenshots/HomeScreen.jpg)
+
 
 
