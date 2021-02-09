@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, TouchableOpacity, Image } from "react-native";
 
-const Home = ({ navigation }) => {
+const Home = ({ navigation, score }) => {
   const { navigate } = navigation;
   return (
     <View
@@ -25,7 +25,7 @@ const Home = ({ navigation }) => {
             color: "#fff",
           }}
         >
-          THE DARK KNIGHT QUIZ
+          THE DARK KNIGHT QUIZ {score}
         </Text>
       </View>
       <View style={{ flex: 5, justifyContent: "center" }}>

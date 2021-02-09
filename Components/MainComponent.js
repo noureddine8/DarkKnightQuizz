@@ -9,7 +9,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      score: 1,
+    };
   }
 
   render() {
