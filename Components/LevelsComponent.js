@@ -1,13 +1,25 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Levels = ({ navigation }) => {
-  const scores = useSelector((state) => {
-    return state.scores;
-  });
   const [data] = useState([{ level: 1, title: "First level" }]);
+  const [scores, setScores] = useState([0]);
+  const getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem("scores");
+      if (jsonValue != null) {
+        setScores(JSON.parse(jsonValue));
+      }
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   const { navigate } = navigation;
   return (
     <View
