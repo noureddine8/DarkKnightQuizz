@@ -61,7 +61,7 @@ const QuizComponent = ({ route, navigation }) => {
         }}
       >
         <Text style={[styles.text, { color: "#fff", textAlign: "center" }]}>
-          {data[num][0]}
+          {data[level - 1][num][0]}
         </Text>
       </View>
       <View
@@ -76,7 +76,7 @@ const QuizComponent = ({ route, navigation }) => {
             justifyContent: "space-around",
           }}
         >
-          {data[num].map((resp) => {
+          {data[level - 1][num].map((resp) => {
             let BG = resp.isTrue ? "#0F0" : "#F00";
             if (typeof resp === "string") return null;
             return (
@@ -89,7 +89,7 @@ const QuizComponent = ({ route, navigation }) => {
                     : [{ backgroundColor: BG }, styles.touchable]
                 }
                 onPress={() => {
-                  if (num == data.length - 1) {
+                  if (num == data[level - 1].length - 1) {
                     if (resp.isTrue) {
                       setScore((score) => score + 1);
                     }

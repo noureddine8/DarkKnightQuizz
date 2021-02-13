@@ -4,8 +4,11 @@ import { FlatList } from "react-native-gesture-handler";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Levels = ({ navigation }) => {
+  //State
   const [data] = useState([{ level: 1, title: "First level" }]);
   const [scores, setScores] = useState([0]);
+
+  //AsyncStorage getData
   const getData = async () => {
     try {
       const jsonValue = await AsyncStorage.getItem("scores");
@@ -16,6 +19,8 @@ const Levels = ({ navigation }) => {
       console.log(e.message);
     }
   };
+
+  //useEffect
   useEffect(() => {
     getData();
   }, []);
