@@ -114,7 +114,7 @@ const QuizComponent = ({ route, navigation }) => {
                       setTouch(false);
                       setNum((num) => num + 1);
                       setRevealed(false);
-                    }, 20);
+                    }, 2000);
                   }
                 }}
               >
