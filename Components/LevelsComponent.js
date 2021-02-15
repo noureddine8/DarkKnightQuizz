@@ -5,8 +5,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Levels = ({ navigation }) => {
   //State
-  const [data] = useState([{ level: 1, title: "First level" }]);
-  const [scores, setScores] = useState([0]);
+  const [data] = useState([
+    { level: 1, title: "Characters" },
+    { level: 2, title: "Batman begins" },
+  ]);
+  const [scores, setScores] = useState([0, 0]);
 
   //AsyncStorage getData
   const getData = async () => {
@@ -51,6 +54,7 @@ const Levels = ({ navigation }) => {
           >
             <Text
               style={{
+                flex: 5,
                 fontSize: 24,
                 fontWeight: "700",
                 color: "#000",
@@ -58,16 +62,29 @@ const Levels = ({ navigation }) => {
             >
               {item.level}. {item.title}
             </Text>
-            <Text
-              style={{
-                fontSize: 20,
-                fontWeight: "700",
-                color: "#090",
-              }}
-            >
-              High Score{" "}
-              {scores[item.level - 1] == null ? "0" : scores[item.level - 1]}/10
-            </Text>
+            <View style={{ flex: 2, flexDirection: "column" }}>
+              <Text
+                style={{
+                  flex: 2,
+                  fontSize: 18,
+                  fontWeight: "700",
+                  color: "#090",
+                }}
+              >
+                High Score
+              </Text>
+              <Text
+                style={{
+                  flex: 2,
+                  fontSize: 16,
+                  fontWeight: "700",
+                  color: "#090",
+                }}
+              >
+                {scores[item.level - 1] == null ? "0" : scores[item.level - 1]}
+                /10
+              </Text>
+            </View>
           </TouchableOpacity>
         )}
         keyExtractor={(item) => item.level.toString()}

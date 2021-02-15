@@ -11,15 +11,22 @@ const QuizComponent = ({ route, navigation }) => {
   const [num, setNum] = useState(0);
   const [score, setScore] = useState(0);
   const [touch, setTouch] = useState(false);
-  const [scores, setScores] = useState([0]);
+  const [scores, setScores] = useState([0, 0]);
+
+  const removeValue = async () => {
+    try {
+      await AsyncStorage.removeItem("scores");
+    } catch (e) {
+      // remove error
+    }
+
+    console.log("removing doneDone.");
+  };
 
   const storeData = async (value, position) => {
     try {
-      let newScores = scores.map((score) => {
-        if (scores.indexOf(score) == position) return value;
-        else return score;
-      });
-      const jsonValue = JSON.stringify(newScores);
+      scores[position] = value;
+      const jsonValue = JSON.stringify(scores);
       await AsyncStorage.setItem("scores", jsonValue);
     } catch (e) {
       console.log(e.message);
@@ -30,7 +37,9 @@ const QuizComponent = ({ route, navigation }) => {
     try {
       const jsonValue = await AsyncStorage.getItem("scores");
       if (jsonValue != null) {
+        console.log("data found");
         setScores(JSON.parse(jsonValue));
+        console.log("we have ", JSON.parse(jsonValue));
       }
     } catch (e) {
       console.log(e.message);
