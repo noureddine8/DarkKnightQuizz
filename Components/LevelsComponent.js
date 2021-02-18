@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { data } from "../shared/data";
 
 const Levels = ({ navigation }) => {
   //State
-  const [data] = useState([
+  const [state, setState] = useState([
     { level: 1, title: "Characters" },
     { level: 2, title: "Batman begins" },
+    { level: 3, title: "The dark knight" },
   ]);
-  const [scores, setScores] = useState([0, 0]);
+  const [scores, setScores] = useState([0, 0, 0]);
 
   //AsyncStorage getData
   const getData = async () => {
@@ -38,7 +40,7 @@ const Levels = ({ navigation }) => {
       }}
     >
       <FlatList
-        data={data}
+        data={state}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={{

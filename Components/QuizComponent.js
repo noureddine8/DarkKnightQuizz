@@ -11,7 +11,7 @@ const QuizComponent = ({ route, navigation }) => {
   const [num, setNum] = useState(0);
   const [score, setScore] = useState(0);
   const [touch, setTouch] = useState(false);
-  const [scores, setScores] = useState([0, 0]);
+  const [scores, setScores] = useState([0, 0, 0]);
 
   const removeValue = async () => {
     try {
@@ -138,10 +138,10 @@ const QuizComponent = ({ route, navigation }) => {
 };
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#141412", paddingTop: 50 },
-  text: { fontSize: 32, fontWeight: "700", color: "#000" },
+  text: { fontSize: 26, fontWeight: "700", color: "#000" },
   touchable: {
     backgroundColor: "#fff",
-    padding: 20,
+    padding: 16,
     borderRadius: 15,
   },
 });
