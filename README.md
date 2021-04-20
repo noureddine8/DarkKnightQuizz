@@ -14,10 +14,10 @@ Dark knight trilogy quizz app
 
 ## Screenshots
 
-<img src ="screenshots/HomeScreen.jpg" width="'400" height="800" />
+<img src ="screenshots/HomeScreen.jpg" width="'300" height="600" />
 
-<img src ="screenshots/LevelsScreen.jpg" width="'400" height="800" />
+<img src ="screenshots/LevelsScreen.jpg" width="'300" height="600" />
 
-<img src ="screenshots/OptionsScreen.jpg" width="'400" height="800" />
+<img src ="screenshots/OptionsScreen.jpg" width="'300" height="600" />
 
-<img src ="screenshots/OptionsRevealedScreen.jpg" width="'400" height="800" />
+<img src ="screenshots/OptionsRevealedScreen.jpg" width="'300" height="600" />
